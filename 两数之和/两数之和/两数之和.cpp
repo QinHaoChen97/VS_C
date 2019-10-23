@@ -1,5 +1,6 @@
 ﻿#include<iostream>
 #include<vector>
+#include<map>
 using namespace std;
 //两数之和
 //给定一个整数数组 nums 和一个目标值 target，请你在该数组中找出和为目标值的那 两个 整数，并返回他们的数组下标。
@@ -30,12 +31,37 @@ public:
 		return{ 0 };
 	}
 };
+//该题哈希表要用到的函数知识储备
+//map.count(Key)返回值为1或者0，1返回存在，0返回不存在，返回的是布尔类型的值，因为在map类型中所有的数据的Key值都是不同的，所以被count的数要么存在1次，要么不存在
+//如果出现两个相同的键值，那么新加入的键值的value会覆盖旧的value,map中只允许有一个相同的键值
+//-------------------------------------------------------------------------
+//key 存放对应的数组值
+//value 存放对应的数组的下标
+//所以map[数组值]返回了该值对应在nums数组中的下标
+class SolutionOne {
+public:
+ vector<int> twoSum(vector<int>& nums, int target) {
+      
+	    map<int,int> m;
+        for(int i=0;i<(int)nums.size();i++)
+        {
+            int b=target-nums[i];
+            if(m.count(b)){//count与find或者下标查找的不同之处需要了解，有则返回1，没有则返回0.
+				return{ i,m[b] };
+            }
+            m[nums[i]]=i;
+        }
+		return{-1,-1};
+    }
+};
+
 int main()
 {
-	vector<int> nums = { 1,2,3,4 };
-	Solution test;
-	vector<int> end=test.twoSum(nums, 4);
-	cout << end[0] << endl;
-	cout << end[1] << endl;
+	vector<int> nums = { 1,1,2,5,9,8};
+	SolutionOne A;
+	vector<int> gettarget;
+	gettarget= A.twoSum(nums, 3);
+	cout << gettarget[0] << endl;
+	cout << gettarget[1] << endl;
 	return 0;
-}
+};
