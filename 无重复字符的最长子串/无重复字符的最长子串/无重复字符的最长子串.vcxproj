@@ -19,9 +19,9 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{2333A7AF-13B2-4B9F-9436-D340F9FCD0AD}</ProjectGuid>
+    <ProjectGuid>{1C869023-F81F-427A-9BB8-F76B015203FC}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
-    <RootNamespace>libev_stu</RootNamespace>
+    <RootNamespace>无重复字符的最长子串</RootNamespace>
     <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
