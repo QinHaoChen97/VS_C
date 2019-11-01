@@ -1,60 +1,7 @@
-#include<iostream>
-#include <string>
-#include<algorithm>
-using namespace std;
-int main()
-{
-	int n,max,segmax;
-	cin >> n;
-	int *a = new int[n];
-	for (int i = 0; i < n; i++)
-	{
-		cin >> a[i];
-	}
-
-	bool allnegative=true;
-	for (int i = 0; i < n; i++)
-	{
-		if (a[i] > 0)
-		{
-			allnegative = false;
-			break;
-		}
-	}
-
-	if (allnegative)
-	{
-		max = a[0];
-		for (int i = 0; i < n; i++)
-		{
-			if (max<a[i])
-			{
-				max = a[i];
-			}
-		}
-		cout << max << endl;
-		delete[]a;
-		return 0;
-	}
-	else
-	{
-		segmax = 0;
-		max = 0;
-		for (int i = 0; i < n; i++)
-		{
-			segmax = segmax + a[i];
-			if (max <= segmax)
-			{
-				max = segmax;
-			}
-			if (segmax<0)
-			{
-				segmax = 0;
-			}
-		}
-		cout << max << endl;
-		delete[]a;
-		return 0;
-	}
-	
-}
+//如试图提取未初始化的数据，则终止程序
+//要以引用返回函数值，则函数定义时要按以下格式：
+//类型标识符 &函数名（形参列表及类型说明）
+//{函数体}
+//说明：
+//（1）以引用返回函数值，定义函数时需要在函数名前加&
+//（2）用引用返回一个函数值的最大好处是，在内存中不产生被返回值的副本。
