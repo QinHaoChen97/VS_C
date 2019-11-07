@@ -19,7 +19,7 @@ class Solution {
 public:
 	vector<int> grayCode(int n) {
 		vector<int> gray;
-		for (int i = 0; i < (1<<n); i++)	//C++存储的时候实际是2进制，故左移实际上是乘2，n位格雷码共有2^n-1个码元
+		for (int i = 0; i < (1<<n); i++)	//C++存储的时候实际是2进制，故左移实际上是乘2，1<<n=1*2的n次方，n位格雷码共有2^n-1个码元
 		{
 			gray.push_back(i ^ (i / 2));	//根据格雷码的公式，注意^是c++中的异或
 		}
