@@ -60,13 +60,6 @@ public:
 				nums[i][j] = nums[i - 1][j] + nums[i][j - 1];  //从第二行第二列开始，一定不会越界
 			}
 		}
-		//for (int i = 0; i < n; i++)
-		//{
-		//	for (int j = 0; j < m; j++)
-		//	{
-		//		cout << nums[i][j] << endl;
-		//	}
-		//}
 		return nums[n - 1][m - 1];
 	}
 };
