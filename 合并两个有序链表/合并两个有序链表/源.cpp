@@ -53,6 +53,7 @@ public:
 			head1 == NULL ? newlist->next = head2 : newlist->next = head1;
 			newlist = newlisthead->next;
 			delete newlisthead;
+			newlisthead = NULL;
 			return newlist;
 		}
 	}
