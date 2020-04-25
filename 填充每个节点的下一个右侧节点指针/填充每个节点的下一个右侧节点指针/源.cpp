@@ -87,3 +87,36 @@ public:
 		return root;
 	}
 };
+class Solution1 {
+public:
+	Node* connect(Node* root) {
+		if (root == NULL)
+			return root;
+		Node* pre;
+		Node* curRoot = root;
+		Node* dummy = new Node(0);
+		dummy->next = NULL;
+		pre = dummy;//中间过程巧妙的将下一层的最右节点赋值给了dummy
+		while (curRoot != NULL) {
+			if (curRoot->left) {
+				pre->next = curRoot->left;
+				pre = pre->next;
+			}
+			if (curRoot->right) {
+				pre->next = curRoot->right;
+				pre = pre->next;
+			}
+			if (curRoot->next != NULL)
+				curRoot = curRoot->next;
+
+			else if (curRoot->next == NULL) { //遍历到某层的最后一个节点就跳到下一层
+				curRoot = dummy->next;
+				dummy->next = NULL;
+				pre = dummy;
+			}
+
+		}
+		return root;
+
+	}
+};
