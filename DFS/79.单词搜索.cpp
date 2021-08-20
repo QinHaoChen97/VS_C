@@ -61,7 +61,7 @@ public:
             {
                 if (path == word)
                 {
-                    //path.pop_back()//对称
+                    path.pop_back();//对称
                     return true;
                 }
                 path.pop_back(); //回溯
