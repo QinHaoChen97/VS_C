@@ -18,7 +18,7 @@ public:
         {
             return {nums};
         }
-        vector<bool> used(nums_len,false);  //判断是否使用过这个数
+        vector<bool> used(nums_len,false);  //判断是否使用过这个数，vector<boo>不要随便用
         vector<vector<int>> ans;
         vector<int> path;
         backtracking(used,path,ans,nums);
