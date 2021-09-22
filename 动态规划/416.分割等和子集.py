@@ -31,7 +31,7 @@ class Solution:
             dp[nums[0]]=True #初始化
         #所以这里要从1开始而不是0开始
         for i in range(1,len(nums)):
-            for j in range(target,0,-1):
+            for j in range(target,0,-1):#-1是step target target-1 ...
                 if j<nums[i]:
                     break
                 if dp[target]:

@@ -330,3 +330,5 @@ ASALocalRun/
 .mfractor/
 /正态分布
 .vscode/settings.json
+动态规划/413.等差数列划分.cpp
+动态规划/416.分割等和子集.py
