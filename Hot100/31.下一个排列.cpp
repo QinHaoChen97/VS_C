@@ -17,6 +17,7 @@ using namespace std;
 #include <vector>
 #include <algorithm>
 using namespace std;
+//https://leetcode-cn.com/problems/next-permutation/solution/xia-yi-ge-pai-lie-by-leetcode-solution/
 class Solution
 {
 public:
