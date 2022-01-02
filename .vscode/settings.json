@@ -45,7 +45,8 @@
         "typeinfo": "cpp",
         "hash_map": "cpp",
         "cstring": "cpp",
-        "iterator": "cpp"
+        "iterator": "cpp",
+        "stack": "cpp"
     },
     "python.formatting.provider": "yapf"
 }
