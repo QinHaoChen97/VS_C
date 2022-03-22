@@ -49,5 +49,5 @@
         "stack": "cpp",
         "list": "cpp"
     },
-    "python.formatting.provider": "yapf"
+    "python.formatting.provider": "autopep8"
 }
